@@ -1,0 +1,33 @@
+<head>
+   <title>ジャンル記事一覧</title>
+   <%= stylesheet_link_tag 'gindex', :media => "all" %>
+</head>
+<div class="toptop"></div>
+<div class="midasi1">
+ <h1>ジャンル記事一覧</h1>
+</div>
+<div class="index-container">
+  <% @kanrisgenre1.each do |t| %> 
+    <div class="kanri">
+      <div class="image-con" alt="<%= t.alt %>">
+          <%= image_tag t.image_url, width: '100%', height: '100%' if t.image? %><br>
+      </div>    
+      <div class="title-box">
+        <div class="genre"><%= t.genre %><br></div>
+        <div class="title"><%= t.title %><br></div>
+      </div>
+      <a href="/kanris/<%= t.id %>" title="リンク先は<%= t.title %>の詳細"></a>
+    </div>
+  <% end %>
+</div>
+
+<%= paginate @kanrisgenre1 %>
+
+<div class="a-right">
+  <a class="showshow" href="/top/">トップページへ</a>
+</div>
+
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

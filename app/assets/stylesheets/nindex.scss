@@ -1,0 +1,16 @@
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+}
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}

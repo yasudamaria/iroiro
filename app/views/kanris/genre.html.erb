@@ -1,0 +1,23 @@
+<head>
+   <title>ジャンル一覧</title>
+   <%= stylesheet_link_tag 'genre', :media => "all" %>
+</head>
+<div class="toptop"></div>
+<div class="midasi1">
+ <h1>ジャンル一覧</h1>
+</div>
+<div class="kanri2">
+   <% @genre_arr.each do |gear| %>
+      <div class="gear">
+         <%= link_to gear, kanris_gindex_path(:gear => gear), class:"a-gen" %>
+      </div>
+   <% end %>
+</div>
+
+<div class="a-right">
+  <a class="showshow" href="/top/">トップページへ</a>
+</div>
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

@@ -1,0 +1,60 @@
+<head>
+  <title>新規作成</title>
+  <%= stylesheet_link_tag 'index', :media => "all" %>
+</head>
+<div class="toptop"></div>
+
+<h3>記事作成</h3>
+<%= form_for @kanri do |f| %>
+
+    <div class="field">
+    <%= f.label :ジャンル %>
+    <%= f.text_field :genre, :size => 140 %>
+   </div>
+
+    <div class="field">
+    <%= f.label :見出し %>
+    <%= f.text_field :title, :size => 140 %>
+   </div>
+
+    <div class="field">
+     <%= f.label :本文 %>
+     
+     <%= f.text_area :body, size: '140x10'%>
+    </div>
+
+    <div class="field">
+     <%= f.label :URL %>
+     <%= f.text_field :url, :size => 140 %>
+    </div>
+    
+    <div class="field">
+     <%= f.label :ALT %>
+     <%= f.text_field :alt, :size => 140 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :画像 %>
+      <%= f.file_field :image, id:"idea-image" %>
+
+      <div class="right-img-upload">
+        <div id="image"></div>
+      </div>
+
+    </div>
+
+    <%= f.submit "作成する" %>
+<% end %>
+
+
+<div class="a-right">
+  <a class="showshow" href="/kanris/">一覧へ</a>
+</div>
+
+
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

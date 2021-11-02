@@ -1,0 +1,400 @@
+.toptop {
+    margin-top: 0px;
+    height: 115px;
+}
+
+.midasi1 {
+    border-bottom:solid 5px #87e760;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+@media screen and (max-width: 767px) {
+    .midasi1 {
+        margin: 0 auto;
+        margin-left: 0px;   
+    }
+}
+
+
+
+
+.showshow {
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 20%;          /* 角丸       */
+    font-size: 16pt;        /* 文字サイズ */     /* 文字位置   */
+    cursor: pointer;     /* カーソル   */
+    padding: 5px 5px;   /* 余白       */
+    background: #fff;     /* 背景色     */
+    color: #35a16b!important;     /* 文字色     */
+    line-height: 1em;         /* 1行の高さ  */
+    transition: .3s;         /* なめらか変化 */
+    box-shadow: 3px 3px 3px #666666;  /* 影の設定 */
+    border: 2px solid #35a16b;    /* 枠の指定 */
+    margin: 20px;
+}
+
+
+.showshow:hover {
+    box-shadow: none;        /* カーソル時の影消去 */
+    color: #35a16b!important;     /* 背景色     */
+    background: #ffffff;     /* 文字色     */
+    transform: translate(0px,3px);
+}
+
+.previews {
+    margin: 30px;
+    border-radius: 10px;
+}
+
+
+.kanri3 {
+    left: 0%;
+    top: 0%;
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 3px #000;
+    overflow-wrap: normal;
+    position: relative;
+    background-color: #fff;
+
+}
+
+.kanri3 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+
+.kanri3 a:hover{
+    opacity: 0.1;
+    background-color: #000000;
+}
+
+
+
+
+.rank {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    z-index: 100;
+}
+
+
+.rank-a {
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50px;  
+    border: solid 3px #35a16b;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.fas {
+    position: absolute;
+    top: 10px;
+    left: 7.5px;
+}
+
+.rank-1 {
+    position: absolute;
+    top: 6px;
+    left: 18px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 
+        2px  2px 1px #ffffff,
+        -2px  2px 1px #ffffff,
+        2px -2px 1px #ffffff,
+        -2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,
+        0px  2px 1px #ffffff,
+        -2px  0px 1px #ffffff,
+        0px -2px 1px #ffffff;   
+}
+
+.rank-2 {
+    position: absolute;
+    top: 6px;
+    left: 19px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 
+        2px  2px 1px #ffffff,
+        -2px  2px 1px #ffffff,
+        2px -2px 1px #ffffff,
+        -2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,
+        0px  2px 1px #ffffff,
+        -2px  0px 1px #ffffff,
+        0px -2px 1px #ffffff;   
+}
+
+.rank-3 {
+    position: absolute;
+    top: 6px;
+    left: 19px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 
+        2px  2px 1px #ffffff,
+        -2px  2px 1px #ffffff,
+        2px -2px 1px #ffffff,
+        -2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,
+        0px  2px 1px #ffffff,
+        -2px  0px 1px #ffffff,
+        0px -2px 1px #ffffff;   
+    
+}
+
+
+
+.rank-b {
+    color:rgba(50, 50, 50, 0);
+}
+
+.image-con {
+    background-color: #7f878f;
+    width: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 60%;
+}
+
+.image-con img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%);
+ 
+}
+
+.title-box {
+    padding: 5px;
+    text-align: start;
+}
+
+.genre {
+    border: solid 5px #4dc4ff;
+    margin-block: 5px;
+    width:fit-content;
+    font-weight: bold;
+    text-decoration: none;/*下線消す*/  
+    color: #000;
+    padding:5px 10px;/*内側の余白*/
+    border-radius: 20px;/*角を丸くする*/
+}
+
+
+.title {
+    border-radius: 5px;
+    width: 100%;
+    height:80px;    
+    overflow: hidden;
+    white-space:normal;
+}
+
+.a-alt {
+    color:rgba(50, 50, 50, 0);
+}
+
+.a-alt:hover {
+    color:rgba(50, 50, 50, 0);
+}
+
+.a-right {
+    text-align: right;
+    z-index: 2;
+}
+
+
+@media screen and (min-width: 768px) {
+    .kanri3 {
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .kanri3 {
+        width: 400px;
+    }
+}
+
+
+
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+}
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}
+
+
+
+
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+ 
+.slick-prev {
+    left: 0px;
+    z-index: 2;
+}
+ 
+.slick-next {
+    right: 0px;
+    z-index: 2;
+}
+ 
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    color: #00af7a;
+    background-color: #fff;
+    border: solid 3px #fff;
+    border-radius: 60px;
+    opacity: 0.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ 
+.slick-prev:before {
+    content: '←';
+}
+ 
+.slick-next:before {
+    content: '→';
+}
+ 
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+ 
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    opacity: 1;
+    border: solid 3px #00af7a;
+}
+ 
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-dots {
+    bottom: -40px!important;
+    height: 20px;
+}
+
+
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 40px!important;
+    height: 40px!important;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    text-indent: -9999px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px;
+    outline: 0;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+}
+.slick-dots li button:before {
+    font-size:30px!important;
+}
+.slick-dots li:nth-child(1) button {
+    background: #00af7a;
+    margin: 10px;
+    opacity:0.4;
+}
+.slick-dots li:nth-child(2) button {
+    background: #00af7a;
+    margin: 10px;
+    opacity:0.4;
+}
+.slick-dots li:nth-child(3) button {
+    background: #00af7a;
+    margin: 10px;
+    opacity:0.4;
+}
+.slick-dots li:nth-child(4) button {
+    background: #00af7a;
+    margin: 10px;
+    opacity:0.4;
+}
+.slick-dots li:nth-child(5) button {
+    background: #00af7a;
+    margin: 10px;
+    opacity:0.4;
+}
+.slick-dots li button:hover, .slick-dots li.slick-active button {
+    border-radius: 0px;
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+}
+

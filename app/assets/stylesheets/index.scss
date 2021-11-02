@@ -1,0 +1,66 @@
+.midasi1 {
+    border-bottom:solid 5px #87e760;
+    margin: 40px;
+    width: fit-content; 
+}
+
+.index-container {
+    height: 20%;
+    margin: 20px;
+    text-align: center;
+
+}
+
+.kanri {
+    margin: 2%;
+    margin-bottom:5px ;
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 3px #000;
+    width: 28%;
+    overflow-wrap: normal;
+    position: relative;
+}
+
+.kanri a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+
+.kanri a:hover{
+    opacity: 0.1;
+    background-color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .kanri {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .kanri {
+        width: 90%;
+    }
+}
+
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+}
+
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}

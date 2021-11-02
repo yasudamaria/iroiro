@@ -1,0 +1,314 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "slick-theme";
+ @import "slick"; 
+
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: solid  5px #03af7a;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+  }
+  
+  .header-fx {
+    display: flex;
+    height: 110px;
+  }
+
+  .top-header {
+    height: 110px;
+    width: 110px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  header a {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px; 
+  }
+
+  header a:hover {
+    text-decoration: none; 
+ 
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  
+  @media screen and (min-width: 770px) {
+    header a {
+      color: #000; 
+    }
+    header a:hover {
+      color: #84919e;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    header a {
+      color: #fff!important; 
+      font-weight: bold;
+      
+    }
+  }
+
+  header h1 {
+    color:#000;
+    margin: 0px;
+    padding: 0px;
+    font-size:50px;
+    font-weight: bold;
+    padding-left: 20px!important;
+
+  }
+
+  
+  header h1:hover {
+    color:#84919e;
+    margin: 0px;
+    padding: 0px;
+    font-size:50px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+
+  }
+
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+    margin: 0px;
+    width: fit-content;
+    align-items: center;
+
+  }
+
+  ul {
+    height: 110px;
+  }
+
+  header li {
+    list-style: none;
+    margin-right: 40px;
+    
+  }
+
+  @media screen and (min-width: 770px) {
+    header li:hover {
+      padding-bottom: 5px;
+    }
+
+  }
+
+  @media screen and (max-width: 770px) {
+    header li:hover {
+      padding-left: 5px;
+    }
+
+  }
+
+
+  @media screen and (min-width: 770px) {
+
+    .hamburger-menu {
+      width: 700px;
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: #03af7a;
+        border: solid 5px #fff;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked ~ .menu-content {
+      left: 30%;/*メニューを画面内へ*/
+
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .menu-content {
+      width: 70%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 100%;/*leftの値を変更してメニューを画面外へ*/
+      z-index: 80;
+      background-color: rgba(3, 175, 122, 0.98);
+      transition: all 0.5s;/*アニメーション設定*/
+    }
+
+    .menu-content ul {
+      padding: 70px 10px 0;
+      width: 70%;
+      display: block;
+    }
+    .menu-content ul li {
+      width: 100%;
+      border-bottom: solid 1px #ffffff;
+      list-style-type: none;
+      margin: 50px;
+    }
+    .menu-content ul li a {
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      box-sizing: border-box;
+      color:#ffffff;
+      text-decoration: none;
+      padding: 9px 15px 10px 0;
+      position: relative;
+    }
+    .menu-content ul li a::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-top: solid 2px #ffffff;
+      border-right: solid 2px #ffffff;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 11px;
+      top: 16px;
+    }
+  }
+
+
+  #menu-btn-check {
+    display: none;
+  }
+
+  h1 {
+    padding: 0px;
+    margin: 0px!important;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  a {
+    color: #000!important;
+    word-wrap:break-word;
+  }
+  a:hover {
+   font-weight: bold;
+   color: #475768!important;
+   text-decoration: none!important;
+  }
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/ /*文字の色を変える*/
+  margin: 10px;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #03af7a!important;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+
+footer {
+  margin-top: 50px;
+  color: #000;
+  font-weight: bold;
+  height: 30px;
+  background-color: #fff;
+  border-top: solid  5px #03af7a;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+

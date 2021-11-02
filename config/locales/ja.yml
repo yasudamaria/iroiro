@@ -1,0 +1,19 @@
+ja:
+  enums: 
+    talk: # モデル名
+      contributor: # カラム名
+        customer: '会員' # enumの値
+        shop: '店舗' # enumの値
+        admin: '管理者' # enumの値
+    customer: # モデル名
+      privacy: # カラム名
+        published: 公開 # enumの値
+        closed: 非公開 # enumの値
+
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."

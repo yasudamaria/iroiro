@@ -1,0 +1,38 @@
+<head>
+  <title>編集</title>
+  <%= stylesheet_link_tag 'index', :media => "all" %>
+</head>
+<div class="toptop"></div>
+<h1>編集画面</h1>
+
+<%= form_for @kanri do |f| %>
+    <%= f.label :ジャンル %>
+    <%= f.text_field :genre, :size => 140 %><br>
+   
+    <%= f.label :見出し %>
+    <%= f.text_field :title, :size => 140 %><br>
+
+    <%= f.label :本文 %>
+    <%= f.text_area :body, size: '140x10'%><br>    
+    <%= f.label :URL %>
+    <%= f.text_field :url, :size => 140 %><br>
+    <div class="field">
+      <%= f.label :ALT %>
+      <%= f.text_field :alt, :size => 140 %>
+    </div><br>
+ 
+    <%= f.label :画像 %>
+    <%= f.file_field :image, id:"idea-image" %><br>
+
+    <div class="right-img-upload">
+      <div id="image"></div>
+    </div>
+
+    <%= f.submit "編集する" %>
+<% end %>
+
+<%= link_to "前のページに戻る", :back %>
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

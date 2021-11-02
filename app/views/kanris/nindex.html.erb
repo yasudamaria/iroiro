@@ -1,0 +1,69 @@
+<head>
+  <title>注目記事一覧</title>
+  <%= stylesheet_link_tag 'nindex', :media => "all" %>
+</head>
+<div class="toptop"></div>
+<div class="midasi1">
+  <h1>注目記事一覧</h1>
+</div>
+<% if user_signed_in? %>
+ <%= link_to '新規記事作成', :controller => "kanris", :action => "new" %>
+<% end %>
+
+<div class="index-container">
+  <% @kanris.each.with_index(1) do |t, index| %>
+    <div class="kanri">
+      <div class="rank">
+        <% unless params[:page] %>
+          <% case index when 1 %>
+            <div class="rank-a">
+              <i class="fas fa-crown" style='color: #f6aa00;'></i>
+            </div>
+            <div class="rank-1">1</div>
+          <% when 2 %>
+            <div class="rank-a">
+              <i class="fas fa-crown" style='color: #84919e;'></i>
+            </div>
+            <div class="rank-2">2</div>
+          <% when 3 %>
+            <div class="rank-a">
+              <i class="fas fa-crown" style='color: #804000;'></i>
+            </div>
+            <div class="rank-3">3</div>
+          <% when 4 %>
+            <div class="rank-a">
+              <%= index %>
+            </div>
+          <% when 5 %>
+            <div class="rank-a">
+              <%= index %>
+            </div>
+          <% else %>
+            <div class="rank-b">
+              <%= index %>
+            </div>
+          <% end %>
+        <% end %>    
+      </div>
+      <div class="image-con" alt="<%= t.alt %>">
+          <%= image_tag t.image_url, width: '100%', height: '100%' if t.image? %><br>
+      </div>
+      <div class="title-box">
+        <div class="genre"><%= t.genre %><br></div>
+        <div class="title"><%= t.title %><br></div>
+      </div>
+      <a href="/kanris/<%= t.id %>" title="リンク先は<%= t.title %>の詳細"></a>
+     
+    </div>
+  <% end %>
+</div>
+<%= paginate @kanris %>
+
+<div class="a-right">
+  <a class="showshow" href="/top/">トップページへ</a>
+</div>
+
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

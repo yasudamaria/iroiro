@@ -1,0 +1,157 @@
+header {
+    display: none;
+}
+
+a:hover {
+    color: #fff!important;
+}
+
+.iroiro-c {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.iroiroiro {
+    width: fit-content;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+    border: solid 3px #35a16b;
+    border-radius: 10px;
+}
+
+.aso-body {
+    color: #fff;
+
+}
+
+#asobody {
+    background-color: #03af7a;
+}
+
+.section-div {
+    text-align: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+@media screen and (min-width: 545px) {
+    .section-div {
+        display: flex;
+    }    
+}
+
+.section-a {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 100px;
+    background-color: #fff;
+    border: solid 3px #03af7a;
+    width: 150px;
+    height: 150px; 
+    align-items: center;
+    text-align: center;
+    display: flex;
+    transition: 0.3s;
+    box-shadow: 3px 3px 3px #666666;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.section-a:hover {
+    background-color: #03af7a;
+    border: solid 3px #fff;
+    box-shadow: none;
+
+}
+
+
+#iro1-container {
+    padding: 5px;
+    margin: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #35a16b;
+    border-radius: 25px;
+}
+
+#iro2-container {
+    padding: 5px;
+    margin: 50px;
+    background-color: #35a16b;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+#iro3-container {
+    padding: 5px;
+    margin: 50px;
+    background-color: #35a16b;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+    
+}
+
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.a-top {
+    text-align: center;
+    margin: 20px;
+}
+
+.topshow {
+    margin: 40px;
+    font-weight: bold;
+    text-decoration: none;/*下線消す*/
+    margin-top: 100px;
+    border: solid 5px #35a16b;
+    color: #000;
+    background-color: #fff;
+    padding:5px 10px;/*内側の余白*/
+    border-radius: 20px;/*角を丸くする*/
+    box-shadow: 3px 3px 3px #666666; 
+    transition: .3s;  
+}
+
+.topshow:hover {
+    background-color: #35a16b;
+    font-weight: bold;
+    color: #84919e;
+    box-shadow: none; 
+    transform: translate(0px,3px);
+}
+
+.bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: -1;  
+}
+
+
+.Polka_v2 {
+    background-image:  radial-gradient(#35a16b 2px, transparent 2px), radial-gradient(#35a16b 2px, #ffffff 2px);
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px;
+}

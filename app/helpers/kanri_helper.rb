@@ -1,0 +1,2 @@
+module KanriHelper
+end

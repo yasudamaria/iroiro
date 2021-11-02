@@ -1,0 +1,65 @@
+.about-container {
+    
+    height: auto;
+    margin: 20px;
+}
+
+@media screen and (min-width: 770px) {
+    .about-container {
+        display: flex;
+    }
+}
+
+.about-left {
+    width: 100%;
+    height: 100%;
+}
+
+.about-image {  
+    max-height:100%;
+    max-width:600px;
+    width: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 60%;
+}
+
+.about-image img {   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.about-body {
+    width:100%;
+    margin: 20px;
+}
+
+.about-url  {
+    margin-top: 10px;
+    width:fit-content;
+    border: solid 2px #ff9900;    
+}
+
+
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+}
+
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}

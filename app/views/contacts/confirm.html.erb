@@ -1,0 +1,58 @@
+<head>
+  <title>お問い合わせ内容確認</title>
+  <%= stylesheet_link_tag 'contacts', :media => "all" %>
+</head>
+
+<div class="toptop"></div>
+
+<div class="midasi4">
+  <h3>お問い合わせ内容確認</h3>
+</div>
+
+
+<div class="co-co-co">
+  <table>
+    <tbody>
+      <tr>
+        <p class="conform-center">お名前</p>
+        <p><%= @contact.name %></p>
+      </tr>
+      <tr>
+        <p class="conform-center">メールアドレス</p>
+        <p><%= @contact.email %></p>
+      </tr>
+      <tr>
+        <p class="conform-center">メッセージ</p>
+        <p style="white-space: pre-wrap;"><%= @contact.message %></p>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="co-co">
+  <div class="co1">
+    <%= form_for(@contact) do |f| %>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :email %>
+      <%= f.hidden_field :message %>
+      <div class="sub-c">
+        <input type="submit" value="送信" class="kakunin">
+      </div>
+    <% end %><br>
+  </div>
+
+  <div class="co2">
+    <%= form_for @contact, url: back_path do |f| %>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :email %>
+      <%= f.hidden_field :message %>
+      <div class="sub-c">
+        <input type="submit" value="戻る" class="kakunin">
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

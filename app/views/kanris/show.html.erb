@@ -1,0 +1,66 @@
+<head>
+  <title><%= @kanri.title %></title>
+  <%= stylesheet_link_tag 'show', :media => "all" %>
+</head>
+<div class="toptop"></div>
+<div class="genre-ct"><p><%= @kanri.genre %> <p></div>
+<%= @kanri.created_at.to_s(:datetime_jp) %></p>
+<br>
+<h3><p><%= @kanri.title %></P></h3>
+
+<div class="show-container">
+  <div class="show-left">
+    <div class="show-image" alt="<%= @kanri.alt %>">
+      <%= image_tag @kanri.image_url, width: '100%', height: '100%' if @kanri.image? %>
+    </div>
+  </div>
+  <br>
+  <div class="show-body">
+    <%= safe_join(@kanri.body.split("\n"), tag(:br)) %>
+    <div class="show-url">
+      紹介したサービスのURL：
+      <%= text_url_to_link(h(@kanri.url)).html_safe %>
+    </div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+<br>
+閲覧数 <%=  @kanri.impressionist_count %>
+<div class="a-right">
+  <% if user_signed_in? && current_user.id == @kanri.user_id %>
+    <%= link_to "編集", edit_kanri_path(@kanri.id) %>
+    <%= button_to "削除", kanri_path(@kanri.id), method: :delete %>
+  <% end %>
+</div>
+
+<div class="midasi1">
+ <h1>おすすめ</h1>
+</div>
+
+<div class="previews">
+  <div class="slider">
+    <% @random.each do |t| %>
+      <div class="kanri3">
+        <div class="image-con">
+            <%= image_tag t.image_url, width: '20%', height: '20%' if t.image? %><br>
+        </div>
+        <div class="genre"><%= t.genre %><br></div>
+        <div class="title"><%= t.title %><br></div>
+        <a href="/kanris/<%= t.id %>" title="リンク先は<%= t.title %>の詳細"></a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+<div class="a-right">
+  <a class="showshow" href="/top/">トップページへ</a>
+</div>
+
+
+<div class="font">
+  <script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/https%3A__iroworld.herokuapp.com_" charset="UTF-8"></script>
+</div>

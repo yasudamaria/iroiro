@@ -1,0 +1,61 @@
+.kanri2 {
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gear {
+    margin: 40px;
+ 
+}
+
+.a-gen{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: solid 3px #03af7a;
+    width: 100px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 3px 3px 3px #666666;
+    justify-content: center;
+}
+
+.a-gen:hover {
+    background-color: #03af7a;
+    border: solid 3px #fff;
+    box-shadow: none;
+
+}
+
+.a-gen a {
+    width: 100px;
+}
+
+p {
+    padding: 0px!important;
+    margin: 0px!important;
+}
+
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__iroworld.herokuapp.com_');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__iroworld.herokuapp.com_') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__iroworld.herokuapp.com_') format('opentype');
+}
+
+body {
+    font-family: minmoji;
+}
+
+.font {
+    text-align: right;
+    margin-top: 20px;
+}
